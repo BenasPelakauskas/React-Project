@@ -9,7 +9,7 @@ class Home extends React.Component { // Home Page
         <h1>Shop Stock Manager</h1>
         <h2>It is {new Date().toLocaleTimeString()}.</h2>
         <br></br>
-        <h2>To start, use the navgiation bar!</h2>
+        <h2>To start, navigate to the about page!</h2>
       </div>
     );
   }
