@@ -5,7 +5,7 @@ class Update extends React.Component {
     constructor(props) {
         super(props);
 
-
+        // Array
         this.state = {
             item: '',
             barCode: '',
@@ -19,7 +19,7 @@ class Update extends React.Component {
         this.handleStockPriceChange = this.handleStockPriceChange.bind(this);
     }
 
-    componentDidMount() {
+    componentDidMount() { // If ID = ID
         alert(this.props.match.params.id);
 
         axios.get('http://localhost:4000/api/stock/' + this.props.match.params.id)
@@ -34,6 +34,7 @@ class Update extends React.Component {
             .catch();
     }
 
+    // Handle
     handleStockItemChange(e) {
         this.setState({ Item: e.target.value });
     }
@@ -68,6 +69,7 @@ class Update extends React.Component {
         });
     }
 
+    // Render
     render() {
         return (
             <div className="App">

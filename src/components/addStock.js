@@ -1,11 +1,12 @@
 import React from 'react';
 import axios from 'axios';
+import '../App.css';
 
 class AddStock extends React.Component {
   constructor(props) {
     super(props);
 
-
+    // Item Array
     this.state = {
       item: '',
       barCode: '',
@@ -18,6 +19,7 @@ class AddStock extends React.Component {
     this.handleStockPriceChange = this.handleStockPriceChange.bind(this);
   }
 
+  // Handle
   handleStockItemChange(e) {
     this.setState({ Item: e.target.value });
   }
@@ -35,7 +37,7 @@ class AddStock extends React.Component {
       + "       " + this.state.Price);
     e.preventDefault();
 
-
+    // Adding Stock
     const newStock = {
       item: this.state.Item,
       barCode: this.state.BarCode,
@@ -52,6 +54,7 @@ class AddStock extends React.Component {
     });
   }
 
+  // Render to screen
   render() {
     return (
       <div className="App">
